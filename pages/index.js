@@ -1,17 +1,5 @@
 /**
  *❕ This demo will not work if you don't have access to the private beta. Please contact us at hello@liveblocks.io if you want access to the storage block private beta **
-
- * 
- * This file shows how to create a simple collaborative form.
- * https://liveblocks.io/examples/collaborative-logo-builder
- *
- * We use the presence block to show the currently focused input to everyone in the room.
- * We use the storage block to persist the state of the form even after everyone leaves the room.
- * 
- * The users picture and name are not set via the `useMyPresence` hook like the cursors.
- * They are set from the authentication endpoint.
- *
- * See pages/api/auth.ts and https://liveblocks.io/docs/api-reference/liveblocks-node#authorize for more information
  */
 
 import {
@@ -35,19 +23,8 @@ const presence = {
 
 
 export default function MultiplayerForm() {
-  /**
-   * updateMyPresence is used to show the focused input to all the users in the room.
-   * It's good way to show to everyone that a user is currently editing a field to avoid potential conflict.
-   * For more information: https://liveblocks.io/docs/api-reference/liveblocks-react#useUpdateMyPresence
-   */
   const updateMyPresence = useUpdateMyPresence(presence);
-
-  /**
-   * useObject is used to share a simple state to all the users in the room.
-   * It's using the storage block so the data is persisted even after all the users leave the room.
-   * For more information: https://liveblocks.io/docs/api-reference/liveblocks-react#useObject
-   */
-
+  
   //default data
   const data = useObject("editor", {
     title: "Title",
