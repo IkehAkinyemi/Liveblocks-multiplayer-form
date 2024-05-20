@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://liveblocks.io">
-    <img src="https://liveblocks.io/icon-192x192.png" height="96">
+    <img src="https://liveblocks.io/icon-192x192.png" height="96" alt="demo">
   </a>
 </p>
 
